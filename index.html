@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice Local</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="container">
+        <h1>Backoffice Local</h1>
+        <div class="tabs">
+            <button onclick="showTab('links')">Links</button>
+            <button onclick="showTab('emails')">E-mails</button>
+            <button onclick="showTab('photos')">Fotos</button>
+            <button onclick="showTab('calendar')">Calendário</button>
+            <button onclick="showTab('notes')">Notas</button>
+            <button onclick="showTab('tasks')">Tarefas</button>
+            <button onclick="showTab('export')">Exportar/Importar</button>
+        </div>
+
+        <!-- Links -->
+        <div id="links" class="tab-content">
+            <h2>Gerenciador de Links</h2>
+            <input type="text" id="linkName" placeholder="Nome do Link">
+            <input type="url" id="linkUrl" placeholder="URL">
+            <button onclick="addLink()">Adicionar</button>
+            <ul id="linkList"></ul>
+        </div>
+
+        <!-- E-mails -->
+        <div id="emails" class="tab-content" style="display: none;">
+            <h2>E-mails</h2>
+            <input type="text" id="emailSubject" placeholder="Assunto">
+            <input type="email" id="emailAddress" placeholder="E-mail">
+            <button onclick="addEmail()">Adicionar</button>
+            <ul id="emailList"></ul>
+        </div>
+
+        <!-- Fotos -->
+        <div id="photos" class="tab-content" style="display: none;">
+            <h2>Fotos</h2>
+            <input type="file" id="photoInput" accept="image/*">
+            <button onclick="addPhoto()">Adicionar</button>
+            <div id="photoGallery"></div>
+        </div>
+
+        <!-- Calendário -->
+        <div id="calendar" class="tab-content" style="display: none;">
+            <h2>Calendário</h2>
+            <input type="text" id="eventName" placeholder="Nome do Evento">
+            <input type="date" id="eventDate">
+            <button onclick="addEvent()">Adicionar</button>
+            <ul id="eventList"></ul>
+        </div>
+
+        <!-- Notas -->
+        <div id="notes" class="tab-content" style="display: none;">
+            <h2>Bloco de Notas</h2>
+            <input type="text" id="noteTitle" placeholder="Título">
+            <textarea id="noteContent" placeholder="Escreva sua nota"></textarea>
+            <button onclick="addNote()">Adicionar</button>
+            <ul id="noteList"></ul>
+        </div>
+
+        <!-- Tarefas -->
+        <div id="tasks" class="tab-content" style="display: none;">
+            <h2>Tarefas</h2>
+            <input type="text" id="taskName" placeholder="Nome da Tarefa">
+            <button onclick="addTask()">Adicionar</button>
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Exportar/Importar -->
+        <div id="export" class="tab-content" style="display: none;">
+            <h2>Exportar/Importar</h2>
+            <button onclick="exportData()">Exportar Dados</button>
+            <input type="file" id="importFile" accept=".json">
+            <button onclick="importData()">Importar Dados</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
