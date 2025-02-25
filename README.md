@@ -12,7 +12,7 @@ Bem-vindo ao **Lumi Backoffice**, uma Progressive Web App (PWA) simples e leve p
 - **Exportar/Importar**: Faça backup ou restaure todos os dados em formato JSON.
 
 ## Como Usar
-1. Acesse a PWA em: [https://seuusuario.github.io/lumi-backoffice/](https://seuusuario.github.io/lumi-backoffice/)
+1. Acesse a PWA em: [https://seuusuario.github.io/lumi-backoffice/](https://rnasce.github.io/lumi-backoffice/)
 2. Navegue pelas abas (Links, E-mails, Fotos, etc.) usando os botões no topo.
 3. Adicione seus dados nas respectivas seções. Tudo é salvo automaticamente no navegador.
 4. Para usar offline, instale a PWA:
